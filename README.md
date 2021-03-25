@@ -8,18 +8,26 @@ Gemaakt door:
 ## Mijn planning
 
 Basis: uitleg, spelen, afgaan en punten
+fase 1
 - [x] maak index.html, style.css en script.js met canvas
-- [ ] teken speler
-- [ ] beweeg speler
-- [ ] ... *(vul zelf aan)*
-- [ ] punten op scherm zetten
-- [ ] punten kunnen scoren
+- [ ] teken slang van 1 segment
+- [ ] beweeg slang oneindig in een richting. 
+- [ ] beweging van richting veranderen als je asdw indrukt
+- [ ] als de slang aan de rand van het scherm is ben je afgaan
 - [ ] uitlegscherm
 
+fase 2
+- [ ] teken 1 bolletje
+- [ ] set nieuwe bolletje neer als je over een bolletje geengaat met de slang
+- [ ] punten op scherm zetten
+- [ ] 1 punt bij elk bolletje dat je eet
+
+
 Uitbreiding: *bedenk iets, bijvoorbeeld meer tegenstanders*
-- [ ] *later uitwerken*
-- [ ] *later uitwerken*
-- [ ] *later uitwerken*
+- [ ] maak de slang 3 segmenten lang
+- [ ] maak de slan zolang als je wilt (met een array)
+- [ ] bij elk bolletje dt je eet komt er 1 stukej slang bij
+- [ ] als de slang zichtzelf bijt ben je af
 
 Uitbreiding: *bedenk iets, bijvoorbeeld bewegende achtergrond*
 - [ ] *later uitwerken*
