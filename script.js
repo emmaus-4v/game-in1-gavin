@@ -80,8 +80,9 @@ var tekenKogel = function(x, y) {
  */
 var tekenSpeler = function(x, y) {
   fill("white");
-  ellipse(x, y, 50, 50);
-  
+  rect(x, y, 50, 50);
+  x=0
+  y=0
 };
 
 
@@ -106,7 +107,14 @@ var beweegKogel = function() {
  * Updatet globale variabele spelerX en spelerY
  */
 var beweegSpeler = function() {
-
+    if (keyCode === LEFT_ARROW) {
+beweegSpeler(-1,0)
+    } else if (keyCode === RIGHT_ARROW) {
+beweegSpeler(1,0)
+    } else if (keyCode === DOWN_ARROW) {
+beweegSpeler(0,1)
+    } else if (keyCode === UP_ARROW) {
+beweegSpeler(0,-1)
 };
 
 
