@@ -16,7 +16,10 @@
 /* ********************************************* */
 /* globale variabelen die je gebruikt in je game */
 /* ********************************************* */
-
+const LEFT_ARROW = 37;
+const RIGHT_ARROW = 39;
+const DOWN_ARROW = 40;
+const UP_ARROW = 39;
 const UITLEG = 0;
 const SPELEN = 1;
 const GAMEOVER = 2;
@@ -108,13 +111,13 @@ var beweegKogel = function() {
  */
 var beweegSpeler = function() {
     if (keyCode === LEFT_ARROW) {
-beweegSpeler(-1,0)
+spelerX-1
     } else if (keyCode === RIGHT_ARROW) {
-beweegSpeler(1,0)
+spelerX+1
     } else if (keyCode === DOWN_ARROW) {
-beweegSpeler(0,1)
-    } else if (keyCode === UP_ARROW) {
-beweegSpeler(0,-1)
+spelerY+1
+    } else if (keyCode === UP_ARROW) 
+spelerY-1
 };
 
 
@@ -195,4 +198,4 @@ function draw() {
       }
       break;
   }
-}
+};
