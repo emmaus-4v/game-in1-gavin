@@ -19,7 +19,7 @@
 const LEFT_ARROW = 37;
 const RIGHT_ARROW = 39;
 const DOWN_ARROW = 40;
-const UP_ARROW = 39;
+const UP_ARROW = 38;
 const UITLEG = 0;
 const SPELEN = 1;
 const GAMEOVER = 2;
@@ -111,13 +111,13 @@ var beweegKogel = function() {
  */
 var beweegSpeler = function() {
     if (keyCode === LEFT_ARROW) {
-spelerX-1
+spelerX=spelerX-1
     } else if (keyCode === RIGHT_ARROW) {
-spelerX+1
+spelerX=spelerX+1
     } else if (keyCode === DOWN_ARROW) {
-spelerY+1
+spelerY=spelerY+1
     } else if (keyCode === UP_ARROW) 
-spelerY-1
+spelerY=spelerY-1
 };
 
 
