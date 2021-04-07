@@ -49,7 +49,7 @@ var score = 0; // aantal behaalde punten
  * Tekent het speelveld
  */
 var tekenVeld = function () {
-  fill("purple");
+  fill("black");
   rect(20, 20, width - 2 * 20, height - 2 * 20);
 };
 
@@ -146,8 +146,7 @@ var checkSpelerGeraakt = function() {
  * Zoekt uit of het spel is afgelopen
  * @returns {boolean} true als het spel is afgelopen
  */
-var checkGameOver = function() {
-    
+var checkGameOver = function() {   
   return false;
 };
 

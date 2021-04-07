@@ -9,9 +9,9 @@ Gemaakt door:
 Basis: uitleg, spelen, afgaan en punten
 fase 1
 - [x] maak index.html, style.css en script.js met canvas
-- [ ] teken slang van 1 segment
-- [ ] beweeg slang oneindig in een richting. 
-- [ ] beweging van richting veranderen als je asdw indrukt
+- [x] teken slang van 1 segment
+- [x] beweeg slang oneindig in een richting. 
+- [x] beweging van richting veranderen als je asdw indrukt
 - [ ] als de slang aan de rand van het scherm is ben je afgaan
 - [ ] uitlegscherm
 
