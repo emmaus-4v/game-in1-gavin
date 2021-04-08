@@ -83,7 +83,7 @@ var tekenKogel = function(x, y) {
  */
 var tekenSpeler = function(x, y) {
   fill("white");
-  rect(x, y, 50, 50);
+  rect(x, y, 10, 10);
   x=0
   y=0
 };
@@ -119,6 +119,15 @@ spelerY=spelerY+1
     } else if (keyCode === UP_ARROW) 
 spelerY=spelerY-1
 };
+
+if (spelerX<0) {
+    spelerX=200
+}
+if (spelerX>1280) {
+    spelerX=200
+};
+
+var g
 
 
 /**
