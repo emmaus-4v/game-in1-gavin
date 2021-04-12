@@ -31,8 +31,8 @@ var spelerY = 100; // y-positie van speler
 var kogelX = 0;    // x-positie van kogel
 var kogelY = 0;    // y-positie van kogel
 
-var vijandX = 0;   // x-positie van vijand
-var vijandY = 0;   // y-positie van vijand
+var puntX = 0;   // x-positie van punt
+var puntY = 0;   // y-positie van punt
 
 var score = 0; // aantal behaalde punten
 
@@ -59,9 +59,11 @@ var tekenVeld = function () {
  * @param {number} x x-coördinaat
  * @param {number} y y-coördinaat
  */
-var tekenVijand = function(x, y) {
-    
-
+var tekenPunt = function(x, y) {
+    fill("white")
+    rect(x,y,20,20)
+    x=6
+    y=5
 };
 
 
@@ -83,7 +85,7 @@ var tekenKogel = function(x, y) {
  */
 var tekenSpeler = function(x, y) {
   fill("white");
-  rect(x, y, 10, 10);
+  rect(x, y, 20, 20);
   x=0
   y=0
 };
@@ -92,7 +94,7 @@ var tekenSpeler = function(x, y) {
 /**
  * Updatet globale variabelen met positie van vijand of tegenspeler
  */
-var beweegVijand = function() {
+var beweegPunt = function() {
     
 };
 
@@ -110,24 +112,29 @@ var beweegKogel = function() {
  * Updatet globale variabele spelerX en spelerY
  */
 var beweegSpeler = function() {
+    /* beweeg speler met pijltjes toetsen */
     if (keyCode === LEFT_ARROW) {
-spelerX=spelerX-1
-    } else if (keyCode === RIGHT_ARROW) {
-spelerX=spelerX+1
-    } else if (keyCode === DOWN_ARROW) {
-spelerY=spelerY+1
-    } else if (keyCode === UP_ARROW) 
-spelerY=spelerY-1
-};
+      spelerX=spelerX-1;
+    } 
+    if (keyCode === RIGHT_ARROW) {
+      spelerX=spelerX+1;
+    } 
+    if (keyCode === DOWN_ARROW) {
+      spelerY=spelerY+1;
+    } 
+    if (keyCode === UP_ARROW) {
+      spelerY=spelerY-1;
+    }
 
-if (spelerX<0) {
-    spelerX=200
-}
-if (spelerX>1280) {
-    spelerX=200
-};
+    /* begrens speler tot scherm */
+    if (spelerX<0) {
+        spelerX=200;
+    }
+    if (spelerX>1280) {
+        spelerX=200;
+    };
 
-var g
+};
 
 
 /**
@@ -182,7 +189,7 @@ function setup() {
 function draw() {
   switch (spelStatus) {
     case SPELEN:
-      beweegVijand();
+      beweegPunt();
       beweegKogel();
       beweegSpeler();
       
@@ -197,7 +204,7 @@ function draw() {
       }
 
       tekenVeld();
-      tekenVijand(vijandX, vijandY);
+      tekenPunt(puntX, puntY);
       tekenKogel(kogelX, kogelY);
       tekenSpeler(spelerX, spelerY);
 
