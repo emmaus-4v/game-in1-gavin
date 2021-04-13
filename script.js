@@ -132,8 +132,12 @@ var beweegSpeler = function() {
     }
     if (spelerX>1280) {
         spelerX=200;
-    };
-
+    }
+    if (spelerY<0) {
+        spelerY=100;
+    }
+    if (spelerY>720)
+        spelerY=100
 };
 
 
