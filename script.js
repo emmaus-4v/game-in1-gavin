@@ -28,9 +28,6 @@ var spelStatus = SPELEN;
 var spelerX = 200; // x-positie van speler
 var spelerY = 100; // y-positie van speler
 
-var kogelX = 0;    // x-positie van kogel
-var kogelY = 0;    // y-positie van kogel
-
 var puntX = 0;   // x-positie van punt
 var puntY = 0;   // y-positie van punt
 
@@ -66,17 +63,6 @@ var tekenPunt = function(x, y) {
 
 
 /**
- * Tekent de kogel of de bal
- * @param {number} x x-coördinaat
- * @param {number} y y-coördinaat
- */
-var tekenKogel = function(x, y) {
-
-
-};
-
-
-/**
  * Tekent de speler
  * @param {number} x x-coördinaat
  * @param {number} y y-coördinaat
@@ -87,23 +73,6 @@ var tekenSpeler = function(x, y) {
   x=0
   y=0
 };
-
-
-/**
- * Updatet globale variabelen met positie van vijand of tegenspeler
- */
-var beweegPunt = function() {
-    
-};
-
-
-/**
- * Updatet globale variabelen met positie van kogel of bal
- */
-var beweegKogel = function() {
-
-};
-
 
 /**
  * Kijkt wat de toetsen/muis etc zijn.
@@ -135,17 +104,7 @@ var beweegSpeler = function() {
         spelerY=100;
     }
     if (spelerY>720)
-        spelerY=100
-};
-
-
-/**
- * Zoekt uit of de vijand is geraakt
- * @returns {boolean} true als vijand is geraakt
- */
-var checkVijandGeraakt = function() {
-
-  return false;
+        spelerY=100;
 };
 
 /**
@@ -154,18 +113,9 @@ var checkVijandGeraakt = function() {
  */
 var checkPuntGeraakt = function() {
   // check of de punt geraakt is, als dat zo is return true anders false
-  return false;
-};
-
-
-/**
- * Zoekt uit of de speler is geraakt
- * bijvoorbeeld door botsing met vijand
- * @returns {boolean} true als speler is geraakt
- */
-var checkSpelerGeraakt = function() {
-    
-  return false;
+  if (spelerX===puntX && spelerY===puntY) {
+      return true
+  }
 };
 
 
@@ -200,30 +150,20 @@ function setup() {
 function draw() {
   switch (spelStatus) {
     case SPELEN:
-      beweegPunt();
-      beweegKogel();
       beweegSpeler();
       
         
       if (checkPuntGeraakt()) {
+          score=+1
+
         // punten erbij
         // de plek van de punt veranderen
         // probeer eerst de punt op 100,100 te zetten. pas daarna je code aan dat het met random werkt
-      }
-        
-      if (checkVijandGeraakt()) {
-        // punten erbij
-        // nieuwe vijand maken
-      }
-      
-      if (checkSpelerGeraakt()) {
-        // leven eraf of gezondheid verlagen
-        // eventueel: nieuwe speler maken
+
       }
 
       tekenVeld();
       tekenPunt(puntX, puntY);
-      tekenKogel(kogelX, kogelY);
       tekenSpeler(spelerX, spelerY);
 
       if (checkGameOver()) {
