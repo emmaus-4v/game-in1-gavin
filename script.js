@@ -60,10 +60,8 @@ var tekenVeld = function () {
  * @param {number} y y-coördinaat
  */
 var tekenPunt = function(x, y) {
-    fill("white")
-    rect(x,y,20,20)
-    x=6
-    y=5
+    fill("white");
+    rect(x,y,20,20);
 };
 
 
@@ -150,6 +148,15 @@ var checkVijandGeraakt = function() {
   return false;
 };
 
+/**
+ * Zoekt uit of de speler op een punt staat
+ * @returns {boolean} true als speler op punt staat
+ */
+var checkPuntGeraakt = function() {
+  // check of de punt geraakt is, als dat zo is return true anders false
+  return false;
+};
+
 
 /**
  * Zoekt uit of de speler is geraakt
@@ -197,6 +204,13 @@ function draw() {
       beweegKogel();
       beweegSpeler();
       
+        
+      if (checkPuntGeraakt()) {
+        // punten erbij
+        // de plek van de punt veranderen
+        // probeer eerst de punt op 100,100 te zetten. pas daarna je code aan dat het met random werkt
+      }
+        
       if (checkVijandGeraakt()) {
         // punten erbij
         // nieuwe vijand maken
