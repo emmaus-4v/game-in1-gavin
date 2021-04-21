@@ -28,8 +28,8 @@ var spelStatus = SPELEN;
 var spelerX = 200; // x-positie van speler
 var spelerY = 100; // y-positie van speler
 
-var puntX = 0;   // x-positie van punt
-var puntY = 0;   // y-positie van punt
+var puntX = 100;   // x-positie van punt
+var puntY = 100;   // y-positie van punt
 
 var score = 0; // aantal behaalde punten
 
@@ -58,7 +58,7 @@ var tekenVeld = function () {
  */
 var tekenPunt = function(x, y) {
     fill("white");
-    rect(x,y,20,20);
+    ellipse(x,y,20,20);
 };
 
 
@@ -154,7 +154,9 @@ function draw() {
       
         
       if (checkPuntGeraakt()) {
-          score=+1
+          (score=+1);
+          (puntY=150);
+          (puntX=150);
 
         // punten erbij
         // de plek van de punt veranderen
