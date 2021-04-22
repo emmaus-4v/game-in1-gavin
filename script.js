@@ -50,6 +50,10 @@ var tekenVeld = function () {
   rect(20, 20, width - 2 * 20, height - 2 * 20);
 };
 
+var scoreboard = function () {
+    fill("white");
+    text("score: ", + score, 20, 20, 20);
+}
 
 /**
  * Tekent de vijand
@@ -144,7 +148,6 @@ function setup() {
   background('blue');
 }
 
-
 /**
  * draw
  * de code in deze functie wordt meerdere keren per seconde
@@ -157,9 +160,9 @@ function draw() {
       
         
       if (checkPuntGeraakt()) {
-          score=+1;
           puntY=random (100, 300);
           puntX=random (100, 300);
+          score+1
          // uitleg over random https://p5js.org/reference/#/p5/random
 
         // punten erbij
@@ -169,6 +172,7 @@ function draw() {
       }
 
       tekenVeld();
+      scoreboard();
       tekenPunt(puntX, puntY);
       tekenSpeler(spelerX, spelerY);
 

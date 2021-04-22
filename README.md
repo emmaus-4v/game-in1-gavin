@@ -16,8 +16,8 @@ fase 1
 - [ ] uitlegscherm
 
 fase 2
-- [ ] teken 1 bolletje
-- [ ] set nieuwe bolletje neer als je over een bolletje geengaat met de slang
+- [x] teken 1 bolletje
+- [x] set nieuwe bolletje neer als je over een bolletje geengaat met de slang
 - [ ] punten op scherm zetten
 - [ ] 1 punt bij elk bolletje dat je eet
 
