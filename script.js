@@ -113,10 +113,13 @@ var beweegSpeler = function() {
  */
 var checkPuntGeraakt = function() {
   // check of de punt geraakt is, als dat zo is return true anders false
-  if (spelerX===puntX && spelerY===puntY) {
-      return true
+  if (abs(spelerX - puntX) < 50 && // spelerX en puntX minder dan 50 pixels van elkaar 
+      abs(spelerY - puntY) < 50) { // spelerY en puntY minder dan 50 pixels van elkaar 
+     // uitleg over de functie abs: https://p5js.org/reference/#/p5/abs
+     return true;
   }
-};
+  return false;
+ };
 
 
 /**
@@ -154,9 +157,10 @@ function draw() {
       
         
       if (checkPuntGeraakt()) {
-          (score=+1);
-          (puntY=150);
-          (puntX=150);
+          score=+1;
+          puntY=random (100, 300);
+          puntX=random (100, 300);
+         // uitleg over random https://p5js.org/reference/#/p5/random
 
         // punten erbij
         // de plek van de punt veranderen
