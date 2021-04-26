@@ -52,7 +52,7 @@ var tekenVeld = function () {
 
 var scoreboard = function () {
     fill("white");
-    text("score: ", + score, 20, 20, 20);
+    text("score = " score, 20, 20, 20, 20);
 }
 
 /**
@@ -162,7 +162,7 @@ function draw() {
       if (checkPuntGeraakt()) {
           puntY=random (100, 300);
           puntX=random (100, 300);
-          score+1
+          score=+1
          // uitleg over random https://p5js.org/reference/#/p5/random
 
         // punten erbij
