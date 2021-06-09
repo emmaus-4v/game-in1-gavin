@@ -50,10 +50,10 @@ var tekenVeld = function () {
   rect(20, 20, width - 2 * 20, height - 2 * 20);
 };
 
-var scoreboard = function () {
+var tekenScore = function () {
     fill("white");
     text("score: " + score, 20, 20, 20, 20);
-}
+};
 
 /**
  * Tekent de vijand
@@ -77,6 +77,7 @@ var tekenSpeler = function(x, y) {
   x=0
   y=0
 };
+
 
 /**
  * Kijkt wat de toetsen/muis etc zijn.
@@ -117,8 +118,8 @@ var beweegSpeler = function() {
  */
 var checkPuntGeraakt = function() {
   // check of de punt geraakt is, als dat zo is return true anders false
-  if (abs(spelerX - puntX) < 50 && // spelerX en puntX minder dan 50 pixels van elkaar 
-      abs(spelerY - puntY) < 50) { // spelerY en puntY minder dan 50 pixels van elkaar 
+  if (abs(spelerX - puntX) < 10 && // spelerX en puntX minder dan 50 pixels van elkaar 
+      abs(spelerY - puntY) < 10) { // spelerY en puntY minder dan 50 pixels van elkaar 
      // uitleg over de functie abs: https://p5js.org/reference/#/p5/abs
      return true;
   }
@@ -162,7 +163,7 @@ function draw() {
       if (checkPuntGeraakt()) {
           puntY=random (100, 300);
           puntX=random (100, 300);
-          score += 10
+          score += 1;
          // uitleg over random https://p5js.org/reference/#/p5/random
 
         // punten erbij
@@ -172,9 +173,10 @@ function draw() {
       }
 
       tekenVeld();
-      scoreboard();
+      tekenScore();
       tekenPunt(puntX, puntY);
       tekenSpeler(spelerX, spelerY);
+      tekenScore();
 
       if (checkGameOver()) {
         spelStatus = GAMEOVER;
