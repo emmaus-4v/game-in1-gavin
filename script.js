@@ -55,6 +55,11 @@ var tekenScore = function () {
     text("score: " + score, 20, 20, 20, 20);
 };
 
+var tekenUitleg = function () {
+    fill ("white");
+    text("gebruik pijltjes toetsen om te bewegen", 100, 100, 20, 20);
+};
+
 /**
  * Tekent de vijand
  * @param {number} x x-coördinaat
@@ -132,6 +137,8 @@ var checkPuntGeraakt = function() {
  * @returns {boolean} true als het spel is afgelopen
  */
 var checkGameOver = function() {   
+    if (spelerX<0 || spelerX>1280 || spelerY<0 || spelerY>720)
+    text("Dead",50,50,50,50);
   return false;
 };
 
@@ -176,6 +183,7 @@ function draw() {
       tekenScore();
       tekenPunt(puntX, puntY);
       tekenSpeler(spelerX, spelerY);
+      tekenUitleg();
       tekenScore();
 
       if (checkGameOver()) {
