@@ -52,12 +52,12 @@ var tekenVeld = function () {
 
 var tekenScore = function () {
     fill("white");
-    text("score: " + score, 20, 20, 20, 20);
+    text("score: " + score, 20, 20, 100, 20);
 };
 
 var tekenUitleg = function () {
     fill ("white");
-    text("gebruik pijltjes toetsen om te bewegen", 100, 100, 20, 20);
+    text("gebruik pijltjes toetsen om te bewegen", 1000,50,250,100);
 };
 
 /**
@@ -84,6 +84,7 @@ var tekenSpeler = function(x, y) {
 };
 
 
+
 /**
  * Kijkt wat de toetsen/muis etc zijn.
  * Updatet globale variabele spelerX en spelerY
@@ -101,7 +102,7 @@ var beweegSpeler = function() {
     } 
     if (keyCode === UP_ARROW) {
       spelerY=spelerY-1;
-    }
+    };
 
     /* begrens speler tot scherm */
     if (spelerX<0) {
@@ -113,7 +114,7 @@ var beweegSpeler = function() {
     if (spelerY<0) {
         spelerY=100;
     }
-    if (spelerY>720)
+    if (spelerY>720) 
         spelerY=100;
 };
 
@@ -137,8 +138,6 @@ var checkPuntGeraakt = function() {
  * @returns {boolean} true als het spel is afgelopen
  */
 var checkGameOver = function() {   
-    if (spelerX<0 || spelerX>1280 || spelerY<0 || spelerY>720)
-    text("Dead",50,50,50,50);
   return false;
 };
 
@@ -168,8 +167,8 @@ function draw() {
       
         
       if (checkPuntGeraakt()) {
-          puntY=random (100, 300);
-          puntX=random (100, 300);
+          puntY=random (30, 400);
+          puntX=random (30, 400);
           score += 1;
          // uitleg over random https://p5js.org/reference/#/p5/random
 
@@ -188,7 +187,7 @@ function draw() {
 
       if (checkGameOver()) {
         spelStatus = GAMEOVER;
+        text("Dead", 20, 20, 20, 20);
       }
       break;
-  }
-};
+};}
