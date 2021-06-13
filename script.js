@@ -118,6 +118,12 @@ var beweegSpeler = function() {
         spelerY=100;
 };
 
+var doodSpeler = function () {
+    /* speler reset punten */
+    if (spelerX<0 || spelerX>1280 || spelerY<0 || spelerY>720)
+        score=0;
+}
+
 /**
  * Zoekt uit of de speler op een punt staat
  * @returns {boolean} true als speler op punt staat
@@ -187,7 +193,6 @@ function draw() {
 
       if (checkGameOver()) {
         spelStatus = GAMEOVER;
-        text("Dead", 20, 20, 20, 20);
       }
       break;
 };}

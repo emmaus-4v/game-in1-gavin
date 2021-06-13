@@ -13,7 +13,7 @@ fase 1
 - [x] beweeg slang oneindig in een richting. 
 - [x] beweging van richting veranderen als je asdw indrukt
 - [x] als de slang aan de rand van het scherm is ben je afgaan
-- [ ] uitlegscherm
+- [x] uitlegscherm
 
 fase 2
 - [x] teken 1 bolletje
