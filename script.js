@@ -143,6 +143,7 @@ var doodSpeler = function () {
     /* speler verliest punten als tegen de rand komt.*/
     if (spelerX<0 || spelerX>1280 || spelerY<0 || spelerY>720)
         score -= 1;
+        text("Je hebt een punt verloren.", 500,50,250,100);
 }
 
 
