@@ -92,16 +92,16 @@ var tekenSpeler = function(x, y) {
 var beweegSpeler = function() {
     /* beweeg speler met pijltjes toetsen */
     if (keyCode === LEFT_ARROW) {
-      spelerX=spelerX-1;
+      spelerX=spelerX-10;
     } 
     if (keyCode === RIGHT_ARROW) {
-      spelerX=spelerX+1;
+      spelerX=spelerX+10;
     } 
     if (keyCode === DOWN_ARROW) {
-      spelerY=spelerY+1;
+      spelerY=spelerY+10;
     } 
     if (keyCode === UP_ARROW) {
-      spelerY=spelerY-1;
+      spelerY=spelerY-10;
     };
 
     /* begrens speler tot scherm */
@@ -124,8 +124,8 @@ var beweegSpeler = function() {
  */
 var checkPuntGeraakt = function() {
   // check of de punt geraakt is, als dat zo is return true anders false
-  if (abs(spelerX - puntX) < 25 && // spelerX en puntX minder dan 10 pixels van elkaar 
-      abs(spelerY - puntY) < 25) { // spelerY en puntY minder dan 10 pixels van elkaar 
+  if (abs(spelerX - puntX) < 50 && // spelerX en puntX minder dan 10 pixels van elkaar 
+      abs(spelerY - puntY) < 50) { // spelerY en puntY minder dan 10 pixels van elkaar 
      // uitleg over de functie abs: https://p5js.org/reference/#/p5/abs
      return true;
   }
