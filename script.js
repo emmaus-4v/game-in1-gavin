@@ -172,8 +172,8 @@ function draw() {
       
         
       if (checkPuntGeraakt()) {
-          puntY=random (10, 1500);
-          puntX=random (10, 1500);
+          puntY=random (10, 1000);
+          puntX=random (10, 1000);
           score += 1;
          // uitleg over random https://p5js.org/reference/#/p5/random
 
