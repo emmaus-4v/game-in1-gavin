@@ -92,16 +92,16 @@ var tekenSpeler = function(x, y) {
 var beweegSpeler = function() {
     /* beweeg speler met pijltjes toetsen */
     if (keyCode === LEFT_ARROW) {
-      spelerX=spelerX-10;
+      spelerX=spelerX-5;
     } 
     if (keyCode === RIGHT_ARROW) {
-      spelerX=spelerX+10;
+      spelerX=spelerX+5;
     } 
     if (keyCode === DOWN_ARROW) {
-      spelerY=spelerY+10;
+      spelerY=spelerY+5;
     } 
     if (keyCode === UP_ARROW) {
-      spelerY=spelerY-10;
+      spelerY=spelerY-5;
     };
 
     /* begrens speler tot scherm */
@@ -172,8 +172,8 @@ function draw() {
       
         
       if (checkPuntGeraakt()) {
-          puntY=random (30, 400);
-          puntX=random (30, 400);
+          puntY=random (10, 1500);
+          puntX=random (10, 1500);
           score += 1;
          // uitleg over random https://p5js.org/reference/#/p5/random
 
