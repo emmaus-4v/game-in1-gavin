@@ -141,7 +141,7 @@ var checkGameOver = function() {
 };
 var doodSpeler = function () {
     /* speler verliest punten als tegen de rand komt.*/
-    if (spelerX<0 || spelerX>1280 || spelerY<0 || spelerY>720)
+    if (spelerX<=0 || spelerX>=1280 || spelerY<=0 || spelerY>=720)
         score=0;
         text("Je verliest al je punten als je tegen de rand komt.", 500,50,250,100);
 }
