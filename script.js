@@ -51,7 +51,7 @@ var tekenVeld = function () {
 };
 
 var tekenScore = function () {
-    fill("white");
+    fill("green");
     text("score: " + score, 20, 20, 100, 20);
 };
 
