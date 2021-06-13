@@ -18,13 +18,13 @@ fase 1
 fase 2
 - [x] teken 1 bolletje
 - [x] set nieuwe bolletje neer als je over een bolletje geengaat met de slang
-- [ ] punten op scherm zetten
-- [ ] 1 punt bij elk bolletje dat je eet
+- [x] punten op scherm zetten
+- [x] 1 punt bij elk bolletje dat je eet
 
 
 Uitbreiding: *bedenk iets, bijvoorbeeld meer tegenstanders*
 - [ ] maak de slang 3 segmenten lang
-- [ ] maak de slan zolang als je wilt (met een array)
+- [ ] maak de slang zolang als je wilt (met een array)
 - [ ] bij elk bolletje dt je eet komt er 1 stukej slang bij
 - [ ] als de slang zichtzelf bijt ben je af
 

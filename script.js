@@ -92,16 +92,16 @@ var tekenSpeler = function(x, y) {
 var beweegSpeler = function() {
     /* beweeg speler met pijltjes toetsen */
     if (keyCode === LEFT_ARROW) {
-      spelerX=spelerX-10;
+      spelerX=spelerX-1;
     } 
     if (keyCode === RIGHT_ARROW) {
-      spelerX=spelerX+10;
+      spelerX=spelerX+1;
     } 
     if (keyCode === DOWN_ARROW) {
-      spelerY=spelerY+10;
+      spelerY=spelerY+1;
     } 
     if (keyCode === UP_ARROW) {
-      spelerY=spelerY-10;
+      spelerY=spelerY-1;
     };
 
     /* begrens speler tot scherm */
@@ -117,13 +117,6 @@ var beweegSpeler = function() {
     if (spelerY>720) 
         spelerY=100;
 };
-
-var doodSpeler = function () {
-    /* speler reset punten */
-    if (spelerX<0 || spelerX>1280 || spelerY<0 || spelerY>720)
-        score=0;
-}
-
 /**
  * Zoekt uit of de speler op een punt staat
  * @returns {boolean} true als speler op punt staat
@@ -146,6 +139,11 @@ var checkPuntGeraakt = function() {
 var checkGameOver = function() {   
   return false;
 };
+var doodSpeler = function () {
+    /* speler reset punten */
+    if (spelerX<0 || spelerX>1280 || spelerY<0 || spelerY>720)
+        score - 1;
+}
 
 
 /**
@@ -181,6 +179,7 @@ function draw() {
         // punten erbij
         // de plek van de punt veranderen
         // probeer eerst de punt op 100,100 te zetten. pas daarna je code aan dat het met random werkt
+        
 
       }
 
@@ -189,6 +188,7 @@ function draw() {
       tekenPunt(puntX, puntY);
       tekenSpeler(spelerX, spelerY);
       tekenUitleg();
+      doodSpeler();
       tekenScore();
 
       if (checkGameOver()) {
