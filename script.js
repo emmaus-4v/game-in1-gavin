@@ -57,7 +57,7 @@ var tekenScore = function () {
 
 var tekenUitleg = function () {
     fill ("white");
-    text("gebruik pijltjes toetsen om te bewegen. Eet de groene bolletjes voor punten.", 1000,50,250,100);
+    text("Gebruik pijltjes toetsen om te bewegen en eet de groene bolletjes voor punten.", 1000,50,250,100);
 };
 
 /**
@@ -92,16 +92,16 @@ var tekenSpeler = function(x, y) {
 var beweegSpeler = function() {
     /* beweeg speler met pijltjes toetsen */
     if (keyCode === LEFT_ARROW) {
-      spelerX=spelerX-5;
+      spelerX=spelerX-10;
     } 
     if (keyCode === RIGHT_ARROW) {
-      spelerX=spelerX+5;
+      spelerX=spelerX+10;
     } 
     if (keyCode === DOWN_ARROW) {
-      spelerY=spelerY+5;
+      spelerY=spelerY+10;
     } 
     if (keyCode === UP_ARROW) {
-      spelerY=spelerY-5;
+      spelerY=spelerY-10;
     };
 
     /* begrens speler tot scherm */
@@ -172,8 +172,8 @@ function draw() {
       
         
       if (checkPuntGeraakt()) {
-          puntY=random (10, 1000);
-          puntX=random (10, 1000);
+          puntY=random (20, 700);
+          puntX=random (20, 1260);
           score += 1;
          // uitleg over random https://p5js.org/reference/#/p5/random
 
