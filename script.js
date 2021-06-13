@@ -51,13 +51,13 @@ var tekenVeld = function () {
 };
 
 var tekenScore = function () {
-    fill("green");
+    fill("white");
     text("score: " + score, 20, 20, 100, 20);
 };
 
 var tekenUitleg = function () {
     fill ("white");
-    text("gebruik pijltjes toetsen om te bewegen", 1000,50,250,100);
+    text("gebruik pijltjes toetsen om te bewegen. Eet de witte bolletjes voor punten.", 1000,50,250,100);
 };
 
 /**
@@ -140,9 +140,9 @@ var checkGameOver = function() {
   return false;
 };
 var doodSpeler = function () {
-    /* speler reset punten */
+    /* speler verliest punten als tegen de rand komt.*/
     if (spelerX<0 || spelerX>1280 || spelerY<0 || spelerY>720)
-        score - 1;
+        score -= 1;
 }
 
 
