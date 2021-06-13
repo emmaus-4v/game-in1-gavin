@@ -61,7 +61,7 @@ var tekenUitleg = function () {
 };
 
 /**
- * Tekent de vijand
+ * Tekent de punt
  * @param {number} x x-coördinaat
  * @param {number} y y-coördinaat
  */
